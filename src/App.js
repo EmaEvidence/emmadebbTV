@@ -1,9 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import Footer from './components/common/Footer';
+import NavBar from './components/common/Nav';
+import LandingPage from './pages/LandingPage';
 
 function App() {
   return (
-    <div></div>
+    <div className="relative">
+      <NavBar />
+      <LandingPage />
+      <Footer />
+    </div>
   );
 }
 
