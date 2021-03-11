@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledDiv = styled.div`
-  height: 60vh;
+  min-height: 60vh;
   width: 100%;
   .title {
     font-weight: 800;
@@ -52,6 +52,24 @@ const StyledDiv = styled.div`
       width: 150px;
       height: 50px;
       background: #4169E1;
+    }
+  }
+  @media screen and (max-width: 972px) {
+    padding: 40px;
+    .content-wrapper {
+      flex-direction: column;
+      .content {
+        text-align: center;
+        align-items: center;
+      }
+      .form-wrapper {
+        width: 100%;
+        padding: 0;
+        form {
+          width: 100%;
+          margin: 0;
+        }
+      }
     }
   }
 `;

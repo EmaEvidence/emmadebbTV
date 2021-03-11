@@ -3,7 +3,7 @@ import User from '../../assets/user.png';
 import HalfCircle from '../../assets/halfCircle.png';
 
 const StyledAbout = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background: #F9FAFC;
   .profile-image {
@@ -11,6 +11,18 @@ const StyledAbout = styled.div`
   }
   .details {
     width: 50%;
+  }
+  @media screen and (max-width: 972px) {
+    flex-direction: column;
+    padding: 40px;
+    .profile-image {
+      width: 100%;
+    }
+    .details {
+      width: 100%;
+      padding: 0;
+      text-align: center;
+    }
   }
 `;
 

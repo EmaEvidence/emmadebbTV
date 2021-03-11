@@ -3,6 +3,7 @@ import Crown from "../../assets/crown.png";
 import Dots from "../../assets/Dots.png";
 import Drum from "../../assets/drum.png";
 import Mat from "../../assets/mat.png";
+import User2 from "../../assets/User2.png";
 import Shekere from "../../assets/shekere.png";
 
 const StyledDiv = styled.div`
@@ -61,6 +62,12 @@ const StyledDiv = styled.div`
       border-radius: 100px;
       left: 200px;
       top: 200px;
+      position: relative;
+      .user {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
     }
     .shekere {
       width: 150px;
@@ -79,6 +86,61 @@ const StyledDiv = styled.div`
       top: 400px;
     }
   }
+  @media screen and (max-width: 972px) {
+    flex-direction: column-reverse;
+    .right {
+      height: 60vh;
+      width: 100vw;
+      .mat {
+        width: 75px;
+        height: 75px;
+      }
+      .drum {
+        width: 50px;
+        height: 50px;
+      }
+      .image {
+        width: 120px;
+        height: 120px;
+        left: 160px;
+        top: 50px;
+      }
+      .shekere {
+        width: 75px;
+        height: 75px;
+        left: 200px;
+        top: 200px;
+      }
+      .crown { 
+        width: 55px;
+        height: 55px;
+        left: 50px;
+        top: 150px;
+      }
+    }
+    .left {
+      height: 40vh;
+      width: 100vw;
+      padding: 40px;
+      justify-content: center;
+      align-items: center;
+      .title {
+        font-size: 24px;
+        width: 90%;
+        line-height: 26px;
+        text-align: center;
+      }
+      .tagline {
+        font-size: 12px;
+        text-align: center;
+        line-height: 14px
+      }
+      button {
+        width: 120px;
+        font-size: 14px;
+      }
+    }
+  }
 `;
 
 const Hero = () => {
@@ -95,10 +157,12 @@ const Hero = () => {
         <div className="mat absolute">
           <img src={Mat} alt="Mat" />
         </div>
-        <div className="drum absolute"><img src={Drum} alt="Drum" /></div>
+        <div className="drum absolute">
+          <img src={Drum} alt="Drum" />
+        </div>
         <div className="image absolute">
           <img src={Dots} alt="Dots" />
-          {/* <img src="" alt="Agbanimu Tunmise" /> */}
+          <img src={User2} className="user" alt="Agbanimu Tunmise" />
         </div>
         <div className="shekere absolute"><img src={Shekere} alt="Shekere" /></div>
         <div className="crown absolute"><img src={Crown} alt="Crown" /></div>

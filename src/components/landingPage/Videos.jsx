@@ -4,7 +4,7 @@ import Thumbnail from "../../assets/thumbnail.png";
 import Play from "../../assets/play.png";
 
 const StyledVideos = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   min-width: 100%;
   width: auto;
   .video {
@@ -23,6 +23,9 @@ const StyledVideos = styled.div`
       background: rgba(255, 255, 255, 0.69);
       z-index: 5;
     }
+  }
+  @media screen and (max-width: 972px) {
+    padding: 40px;
   }
 `;
 

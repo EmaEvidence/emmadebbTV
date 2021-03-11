@@ -3,7 +3,7 @@ import ContentWraper from "../common/ContentWrapper";
 import Thumbnail from "../../assets/thumbnail.png";
 
 const StyledBlogs = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   min-width: 100%;
   width: auto;
   .blog {
@@ -62,6 +62,9 @@ const StyledBlogs = styled.div`
       border-radius: 25px;
       background: rgba(255, 255, 255, 0.69);
     }
+  }
+  @media screen and (max-width: 972px) {
+    padding: 40px;
   }
 `;
 

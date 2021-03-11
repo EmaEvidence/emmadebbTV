@@ -6,13 +6,13 @@ import Videos from "../components/landingPage/Videos";
 
 const LandingPage = () => {
   return (
-    <>
-      <Hero />
-      <About />
-      <Videos />
-      <Blogs />
-      <ContactUs />
-    </>
+    <div className="mt-14">
+      <Hero id="hero" />
+      <About id="about" />
+      <Videos id="videos" />
+      <Blogs id="blogs" />
+      <ContactUs id="contactus" />
+    </div>
   )
 }
 
