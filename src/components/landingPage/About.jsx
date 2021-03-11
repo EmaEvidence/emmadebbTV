@@ -28,7 +28,7 @@ const StyledAbout = styled.div`
 
 const About = () => {
   return (
-    <StyledAbout className="relative px-32 flex flex-row justify-between items-center">
+    <StyledAbout id="about" className="relative px-32 flex flex-row justify-between items-center">
       <img src={HalfCircle} alt="Half Circle" className="half-circle absolute top-0 left-0" />
       <div className="profile-image">
         <img src={User} alt="Agbanimu Tunmise" />

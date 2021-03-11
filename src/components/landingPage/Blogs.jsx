@@ -136,7 +136,7 @@ const Blogs = () => {
     )
   }
   return (
-    <StyledBlogs className="px-32 py-10">
+    <StyledBlogs id="blogs" className="px-32 py-10">
       <ContentWraper title="Blog" data={blogs} renderComponent={renderBlog}/>
     </StyledBlogs>
   )

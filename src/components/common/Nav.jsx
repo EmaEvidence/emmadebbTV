@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { FaFacebook, FaYoutube, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { BiMenu } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
-import {HashLink} from "react-router-hash-link";
+import {HashLink as Link} from "react-router-hash-link";
 import { useState } from "react";
 
 const StyledNavBar = styled.nav`
@@ -76,18 +76,18 @@ const NavBar = () => {
           <span>Yoruba</span>
         </div>
         <ul className="flex flex-row items-center items">
-          <HashLink to="" scroll={(el) => el.scrollIntoView({behavior: 'smooth', block: 'start'})}>
+          <Link to="/#about" scroll={(el) => el.scrollIntoView({behavior: 'smooth', block: 'start'})}>
             <li >About</li>
-          </HashLink>
-          <HashLink to="" scroll={(el) => el.scrollIntoView({behavior: 'smooth', block: 'start'})}>
+          </Link>
+          <Link to="/#videos" scroll={(el) => el.scrollIntoView({behavior: 'smooth', block: 'start'})}>
             <li>Videos</li>
-          </HashLink>
-          <HashLink to="" scroll={(el) => el.scrollIntoView({behavior: 'smooth', block: 'start'})}>
+          </Link>
+          <Link to="/#blogs" scroll={(el) => el.scrollIntoView({behavior: 'smooth', block: 'start'})}>
             <li>Blogs</li>
-          </HashLink>
-          <HashLink to="" scroll={(el) => el.scrollIntoView({behavior: 'smooth', block: 'start'})}>
+          </Link>
+          <Link to="/#contactus" scroll={(el) => el.scrollIntoView({behavior: 'smooth', block: 'start'})}>
             <li>Contact Us</li>
-          </HashLink>
+          </Link>
         </ul>
       </div>
       <ul className="flex flex-row items-center social-links">
@@ -102,23 +102,23 @@ const NavBar = () => {
       </button>
       {
         openMenu && (
-          <div className="mobile-menu">
+          <div className="mobile-menu" onClick={() => setOpenMenu(!openMenu)}>
             <button className="absolute top-5 right-5" onClick={() => setOpenMenu(!openMenu)}>
               <AiOutlineClose className="mobile-menu-open" />
             </button>
             <ul className="flex flex-row items-center items">
-              <HashLink to="" scroll={(el) => el.scrollIntoView({behavior: 'smooth', block: 'start'})}>
+              <Link to="/#about" scroll={(el) => el.scrollIntoView({behavior: 'smooth', block: 'start'})}>
                 <li >About</li>
-              </HashLink>
-              <HashLink to="" scroll={(el) => el.scrollIntoView({behavior: 'smooth', block: 'start'})}>
+              </Link>
+              <Link to="/#videos" scroll={(el) => el.scrollIntoView({behavior: 'smooth', block: 'start'})}>
                 <li>Videos</li>
-              </HashLink>
-              <HashLink to="" scroll={(el) => el.scrollIntoView({behavior: 'smooth', block: 'start'})}>
+              </Link>
+              <Link to="/#blogs" scroll={(el) => el.scrollIntoView({behavior: 'smooth', block: 'start'})}>
                 <li>Blogs</li>
-              </HashLink>
-              <HashLink to="" scroll={(el) => el.scrollIntoView({behavior: 'smooth', block: 'start'})}>
+              </Link>
+              <Link to="/#contactus" scroll={(el) => el.scrollIntoView({behavior: 'smooth', block: 'start'})}>
                 <li>Contact Us</li>
-              </HashLink>
+              </Link>
             </ul>
             <ul className="flex flex-row items-center social-links">
               <li><FaFacebook /></li>

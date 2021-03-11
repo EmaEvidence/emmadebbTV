@@ -76,7 +76,7 @@ const StyledDiv = styled.div`
 
 const ContactUs = () => {
   return (
-    <StyledDiv className="px-32 my-28">
+    <StyledDiv id="contactus" className="px-32 my-28">
       <span className="title">Contact Us</span>
       <div className="mt-18 flex flex-row justify-between items-center content-wrapper">
         <div className="flex flex-col justify-between items-start w-6/12 content">

@@ -67,7 +67,7 @@ const Videos = () => {
     )
   }
   return (
-    <StyledVideos className="px-32 py-10">
+    <StyledVideos id="videos" className="px-32 py-10">
       <ContentWraper title="Videos" data={videos} renderComponent={renderVideo}/>
     </StyledVideos>
   )

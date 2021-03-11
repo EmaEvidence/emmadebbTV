@@ -7,11 +7,11 @@ import Videos from "../components/landingPage/Videos";
 const LandingPage = () => {
   return (
     <div className="mt-14">
-      <Hero id="hero" />
-      <About id="about" />
-      <Videos id="videos" />
-      <Blogs id="blogs" />
-      <ContactUs id="contactus" />
+      <Hero />
+      <About />
+      <Videos />
+      <Blogs />
+      <ContactUs />
     </div>
   )
 }
