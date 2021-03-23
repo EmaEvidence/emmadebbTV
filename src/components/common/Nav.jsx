@@ -66,7 +66,7 @@ const StyledNavBar = styled.nav`
   }
 `;
 
-const NavBar = () => {
+const NavBar = ({ siteInfo }) => {
   const [openMenu, setOpenMenu] = useState(false);
   return (
     <StyledNavBar className="flex-row flex items-center px-32 justify-between">
@@ -91,11 +91,11 @@ const NavBar = () => {
         </ul>
       </div>
       <ul className="flex flex-row items-center social-links">
-        <li><FaFacebook /></li>
-        <li><FaYoutube /></li>
-        <li><FaInstagram /></li>
-        <li><FaTwitter /></li>
-        <li><FaLinkedin /></li>
+        <li><a href={siteInfo.facebooklink} target="new"><FaFacebook /></a></li>
+        <li><a href={siteInfo.youtubelink} target="new"><FaYoutube /></a></li>
+        <li><a href={siteInfo.instagramlink} target="new"><FaInstagram /></a></li>
+        <li><a href={siteInfo.twitterlink} target="new"><FaTwitter /></a></li>
+        <li><a href={siteInfo.linkedInlink} target="new"><FaLinkedin /></a></li>
       </ul>
       <button className="open-btn" onClick={() => setOpenMenu(!openMenu)}>
         <BiMenu className="mobile-menu-open" />

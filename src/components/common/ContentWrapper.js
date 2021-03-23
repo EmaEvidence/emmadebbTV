@@ -40,13 +40,13 @@ const ContentWraper = ({data, renderComponent, title}) => {
           ))
         }
       </div>
-      <div className="flex flex-row justify-end items-center">
+      {/* <div className="flex flex-row justify-end items-center">
         <span>1 of 6</span>
       </div>
       <div className="button-wrapper flex flex-row justify-center items-center">
         <button>{'<'}</button>
         <button>{'>'}</button>
-      </div>
+      </div> */}
     </StyledContentWraper>
   )
 }

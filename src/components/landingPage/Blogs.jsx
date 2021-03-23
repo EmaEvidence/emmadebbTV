@@ -1,4 +1,6 @@
-import styled from "styled-components"
+import styled from "styled-components";
+import axios from 'axios';
+import { useEffect, useState } from "react";
 import ContentWraper from "../common/ContentWrapper";
 import Thumbnail from "../../assets/thumbnail.png";
 
@@ -120,6 +122,19 @@ const blogs = [
 ]
 
 const Blogs = () => {
+  const [loading, setLoading] = useState(true);
+  const [blogs, setBlogs] = useState([]);
+  useEffect(() => {
+    axios.get('https://emmadebb.herokuapp.com/blogs')
+    .then((response) => {
+      setBlogs(response.data);
+      setLoading(false);
+    })
+    .catch((error) => {
+      setLoading(false);
+    });
+  }, []);
+
   const renderBlog = (blog) => {
     return (
       <a href={blog.url} className="blog relative m-4">
@@ -137,7 +152,10 @@ const Blogs = () => {
   }
   return (
     <StyledBlogs id="blogs" className="px-32 py-10">
-      <ContentWraper title="Blog" data={blogs} renderComponent={renderBlog}/>
+      {
+        loading ?
+          <p>Loading Blogs</p> : !loading && blogs.length === 0 ? <p>No Blog yet</p> : <ContentWraper title="Blog" data={blogs} renderComponent={renderBlog}/>
+      }
     </StyledBlogs>
   )
 }

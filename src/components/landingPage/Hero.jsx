@@ -1,3 +1,4 @@
+import {HashLink as Link} from "react-router-hash-link";
 import styled from "styled-components";
 import Crown from "../../assets/crown.png";
 import Dots from "../../assets/Dots.png";
@@ -143,15 +144,38 @@ const StyledDiv = styled.div`
   }
 `;
 
-const Hero = () => {
+// aboutus: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum diam orci pretium a pharetra, feugiat cursus. Dictumst risus, sem egestas odio cras adipiscing vulputate. Nisi, risus in suscipit non. Non commodo volutpat, pharetra, vel."
+// aboutusimage: [{…}]
+// contactustext: "Download the app to manage your projects, keep track of the progress and complete tasks without procastinating. Stay on track and complete on time!"
+// created_at: "2021-03-18T11:32:00.517Z"
+// crownimage: {id: 2, name: "crown.png", alternativeText: "", caption: "", width: 112, …}
+// drumimage: {id: 3, name: "drum.png", alternativeText: "", caption: "", width: 128, …}
+// email: "email@email.com"
+// facebooklink: null
+// id: 1
+// instagramlink: null
+// : null
+// matimage: {id: 5, name: "mat.png", alternativeText: "", caption: "", width: 200, …}
+// phone1: "+2347033442255"
+// phone2: "+2347033442255"
+// published_at: "2021-03-18T11:32:03.896Z"
+// shekereimage: {id: 4, name: "shekere.png", alternativeText: "", caption: "", width: 200, …}
+// tagline: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in et, lectus sit lorem id integer."
+// : null
+// updated_at: "2021-03-18T11:39:23.626Z"
+// null
+
+const Hero = ({ siteInfo }) => {
   return (
     <StyledDiv className="flex flex-row">
       <div className="left flex flex-col items-start justify-center pl-32">
         <span className="title my-4">
           Yoruba Language Made Easy
         </span>
-        <span className="tagline my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in et, lectus sit lorem id integer.</span>
-        <button>Get Started</button>
+        <span className="tagline my-4">{siteInfo.tagline}</span>
+        <Link to="/#videos" scroll={(el) => el.scrollIntoView({behavior: 'smooth', block: 'start'})}>
+          <button>Get Started</button>
+        </Link>
       </div>
       <div className="right h-full relative">
         <div className="mat absolute">

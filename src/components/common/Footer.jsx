@@ -29,16 +29,16 @@ const StyledFooter = styled.footer`
   }
 `;
 
-const Footer = () => {
+const Footer = ({ siteInfo }) => {
   return (
     <StyledFooter className="flex-row flex justify-between items-center px-32">
       <span>© 2021 EmmadebbTV. All rights reserved</span>
       <ul className="flex-row flex justify-between items-center">
-        <li><FaFacebook /></li>
-        <li><FaYoutube /></li>
-        <li><FaInstagram /></li>
-        <li><FaTwitter /></li>
-        <li><FaLinkedin /></li>
+        <li><a href={siteInfo.facebooklink} target="new"><FaFacebook /></a></li>
+        <li><a href={siteInfo.youtubelink} target="new"><FaYoutube /></a></li>
+        <li><a href={siteInfo.instagramlink} target="new"><FaInstagram /></a></li>
+        <li><a href={siteInfo.twitterlink} target="new"><FaTwitter /></a></li>
+        <li><a href={siteInfo.linkedInlink} target="new"><FaLinkedin /></a></li>
       </ul>
     </StyledFooter>
   )

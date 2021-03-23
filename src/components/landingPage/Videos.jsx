@@ -1,4 +1,6 @@
-import styled from "styled-components"
+import styled from "styled-components";
+import axios from 'axios';
+import { useEffect, useState } from "react";
 import ContentWraper from "../common/ContentWrapper";
 import Thumbnail from "../../assets/thumbnail.png";
 import Play from "../../assets/play.png";
@@ -29,37 +31,23 @@ const StyledVideos = styled.div`
   }
 `;
 
-const videos = [
-  {
-    thumbnail: Thumbnail
-  },
-  {
-    thumbnail: Thumbnail
-  },{
-    thumbnail: Thumbnail
-  },
-  {
-    thumbnail: Thumbnail
-  },
-  {
-    thumbnail: Thumbnail
-  },
-  {
-    thumbnail: Thumbnail
-  },
-    {
-    thumbnail: Thumbnail
-  },
-  {
-    thumbnail: Thumbnail
-  }
-]
-
 const Videos = () => {
+  const [loading, setLoading] = useState(true);
+  const [videos, setVideos] = useState([]);
+  useEffect(() => {
+    axios.get('https://emmadebb.herokuapp.com/videos')
+    .then((response) => {
+      setVideos(response.data)
+      setLoading(false);
+    })
+    .catch((error) => {
+      setLoading(false);
+    });
+  }, []);
   const renderVideo = (video) => {
     return (
-      <a href={video.url} className="video relative m-4 flex flex-row justify-center items-center">
-        <img src={video.thumbnail} alt="Thumbnail" className="absolute top-0 left-0" />
+      <a href={video.url} target="blank" className="video relative m-4 flex flex-row justify-center items-center">
+        <img src={video.thumbnail || Thumbnail} alt="Thumbnail" className="absolute top-0 left-0" />
         <div className="play-btn flex flex-row justify-center items-center">
           <img src={Play} alt="Play Icon" />
         </div>
@@ -68,7 +56,10 @@ const Videos = () => {
   }
   return (
     <StyledVideos id="videos" className="px-32 py-10">
-      <ContentWraper title="Videos" data={videos} renderComponent={renderVideo}/>
+      {
+        loading ?
+          <p>Loading Videos</p> : !loading && videos.length === 0 ? <p>No Video yet</p> : <ContentWraper title="Videos" data={videos} renderComponent={renderVideo} />
+      }
     </StyledVideos>
   )
 }

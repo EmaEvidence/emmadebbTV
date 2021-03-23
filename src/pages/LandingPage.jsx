@@ -4,14 +4,16 @@ import ContactUs from "../components/landingPage/Contact";
 import Hero from "../components/landingPage/Hero";
 import Videos from "../components/landingPage/Videos";
 
-const LandingPage = () => {
+const LandingPage = ({
+  siteInfo,
+}) => {
   return (
     <div className="mt-14">
-      <Hero />
-      <About />
+      <Hero siteInfo={siteInfo} />
+      <About siteInfo={siteInfo} />
       <Videos />
       <Blogs />
-      <ContactUs />
+      <ContactUs siteInfo={siteInfo} />
     </div>
   )
 }

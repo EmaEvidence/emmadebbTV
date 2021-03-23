@@ -26,7 +26,7 @@ const StyledAbout = styled.div`
   }
 `;
 
-const About = () => {
+const About = ({siteInfo}) => {
   return (
     <StyledAbout id="about" className="relative px-32 flex flex-row justify-between items-center">
       <img src={HalfCircle} alt="Half Circle" className="half-circle absolute top-0 left-0" />
@@ -36,7 +36,7 @@ const About = () => {
       <div className="details p-20 flex-col flex justify-center items-start">
         <span className="title font-bold my-4 text-3xl">Agbanimu Tunmise</span>
         <span className="content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum diam orci pretium a pharetra, feugiat cursus. Dictumst risus, sem egestas odio cras adipiscing vulputate. Nisi, risus in suscipit non. Non commodo volutpat, pharetra, vel.
+          {siteInfo.aboutus}
         </span>
       </div>
     </StyledAbout>
