@@ -70,56 +70,56 @@ const StyledBlogs = styled.div`
   }
 `;
 
-const blogs = [
-  {
-    thumbnail: '',
-    title: 'Blog Title',
-    summary: 'Lorem ipsum dolor sit amet, dj sdhsd hd consectetur.',
-    date: '12/12/2021'
-  },
-  {
-    thumbnail: '',
-    title: 'Blog Title',
-    summary: 'Lorem ipsum dolor sit amet, dj sdhsd hd consectetur.',
-    date: '12/12/2021'
-  },
-  {
-    thumbnail: '',
-    title: 'Blog Title',
-    summary: 'Lorem ipsum dolor sit amet, dj sdhsd hd consectetur.',
-    date: '12/12/2021'
-  },
-  {
-    thumbnail: '',
-    title: 'Blog Title',
-    summary: 'Lorem ipsum dolor sit amet, dj sdhsd hd consectetur.',
-    date: '12/12/2021'
-  },
-  {
-    thumbnail: '',
-    title: 'Blog Title',
-    summary: 'Lorem ipsum dolor sit amet, dj sdhsd hd consectetur.',
-    date: '12/12/2021'
-  },
-  {
-    thumbnail: '',
-    title: 'Blog Title',
-    summary: 'Lorem ipsum dolor sit amet, dj sdhsd hd consectetur.',
-    date: '12/12/2021'
-  },
-  {
-    thumbnail: '',
-    title: 'Blog Title',
-    summary: 'Lorem ipsum dolor sit amet, dj sdhsd hd consectetur.',
-    date: '12/12/2021'
-  },
-  {
-    thumbnail: '',
-    title: 'Blog Title',
-    summary: 'Lorem ipsum dolor sit amet, dj sdhsd hd consectetur.',
-    date: '12/12/2021'
-  },
-]
+// const blogs = [
+//   {
+//     thumbnail: '',
+//     title: 'Blog Title',
+//     summary: 'Lorem ipsum dolor sit amet, dj sdhsd hd consectetur.',
+//     date: '12/12/2021'
+//   },
+//   {
+//     thumbnail: '',
+//     title: 'Blog Title',
+//     summary: 'Lorem ipsum dolor sit amet, dj sdhsd hd consectetur.',
+//     date: '12/12/2021'
+//   },
+//   {
+//     thumbnail: '',
+//     title: 'Blog Title',
+//     summary: 'Lorem ipsum dolor sit amet, dj sdhsd hd consectetur.',
+//     date: '12/12/2021'
+//   },
+//   {
+//     thumbnail: '',
+//     title: 'Blog Title',
+//     summary: 'Lorem ipsum dolor sit amet, dj sdhsd hd consectetur.',
+//     date: '12/12/2021'
+//   },
+//   {
+//     thumbnail: '',
+//     title: 'Blog Title',
+//     summary: 'Lorem ipsum dolor sit amet, dj sdhsd hd consectetur.',
+//     date: '12/12/2021'
+//   },
+//   {
+//     thumbnail: '',
+//     title: 'Blog Title',
+//     summary: 'Lorem ipsum dolor sit amet, dj sdhsd hd consectetur.',
+//     date: '12/12/2021'
+//   },
+//   {
+//     thumbnail: '',
+//     title: 'Blog Title',
+//     summary: 'Lorem ipsum dolor sit amet, dj sdhsd hd consectetur.',
+//     date: '12/12/2021'
+//   },
+//   {
+//     thumbnail: '',
+//     title: 'Blog Title',
+//     summary: 'Lorem ipsum dolor sit amet, dj sdhsd hd consectetur.',
+//     date: '12/12/2021'
+//   },
+// ]
 
 const Blogs = () => {
   const [loading, setLoading] = useState(true);
